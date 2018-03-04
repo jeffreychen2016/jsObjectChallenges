@@ -94,4 +94,31 @@ else
 
 document.getElementById('challenge-2').innerHTML = domString;
 
+/*------------------- Challenge 3 -------------------*/
+var test1 = {a: 5, b:2, operator: "add"};  //7
+var test1 = {a: 5, b:2, operator: "subtract"}; //3
+var test1 = {a: 5, b:2, operator: "multiply"}; //10
+var test1 = {a: 5, b:2, operator: "divide"}; //2.5
+
+var result = 0;
+switch(test1.operator)
+{
+    case 'add':
+        result = test1.a + test1.b;
+        break;
+    case 'substract':
+        result = test1.a - test1.b;
+        break;
+    case 'multiply':
+        result = test1.a * test1.b;
+        break;
+    case 'divide':
+        result = test1.a / test1.b;
+        break;
+}
+
+var domString = '<h1>' + result + '</h>';
+document.getElementById('challenge-3').innerHTML = domString;
+
+
 
