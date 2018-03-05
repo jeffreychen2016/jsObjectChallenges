@@ -125,7 +125,7 @@ var names = ['fred', 'barney'];
 var ages = [30,40];
 //Output:  { 'fred': 30, 'barney': 40 }
 
-var result = {};
+var output = {};
 var domString;
 
 for(var i = 0; i < ages.length; i++)
@@ -134,14 +134,41 @@ for(var i = 0; i < ages.length; i++)
     var age = ages[i];
     // can not do {name:age} here because it will look for key that named 'name'
     // so must use [name] to referece to the name variable
-    result = {[name]:age};
-    for (var j in result)
+    output = {[name]:age};
+    for (var j in output)
     {
-        domString += '<h1>' + j + ':' + result[j] + '</h>';
-        document.getElementById('challenge-3').innerHTML = domString;
+        domString += '<h1>' + j + ':' + output[j] + '</h>';
+        document.getElementById('challenge-4').innerHTML = domString;
     }
 }
 
+/*------------------- Challenge 5 -------------------*/
+// var candidate1 = {
+//     minSalary: 120000
+//   };
+//   let job1 = {
+//     maxSalary: 140000
+//   }
+  //output is true.  this job can hire any minSalary less than $126,000
+  var candidate1 = {
+    minSalary: 950000
+  };
+  let job1 = {
+    maxSalary: 100000
+  }
+  //output is false.  this job can hire any minSalary less than $90,000
+  
+  if(candidate1.minSalary <= job1.maxSalary * 0.9)
+  {
+    var domString = '<h1>' + 'true' + '</h>';
+    document.getElementById('challenge-5').innerHTML = domString;
+  }
+  else
+  {
+    var domString = '<h1>' + 'false' + '</h>';
+    document.getElementById('challenge-5').innerHTML = domString;
+  }
+  
 
 
 
