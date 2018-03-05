@@ -120,5 +120,39 @@ switch(test1.operator)
 var domString = '<h1>' + result + '</h>';
 document.getElementById('challenge-3').innerHTML = domString;
 
+/*------------------- Challenge 4 -------------------*/
+var names = ['fred', 'barney'];
+var ages = [30,40];
+//Output:  { 'fred': 30, 'barney': 40 }
+
+var result = {};
+var domString;
+
+for(var i = 0; i < ages.length; i++)
+{
+    var name = names[i];
+    var age = ages[i];
+    // can not do {name:age} here because it will look for key that named 'name'
+    // so must use [name] to referece to the name variable
+    result = {[name]:age};
+    for (var j in result)
+    {
+        domString += '<h1>' + j + ':' + result[j] + '</h>';
+        document.getElementById('challenge-3').innerHTML = domString;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
